@@ -7,7 +7,16 @@ exports.userSignUpValidator = [
 		.withMessage('Name is required'),
 	check('email')
 		.isEmail()
-		.withMessage('Email is required'),
+		.withMessage('Email must be valid'),
+	check('password')
+		.isLength({ min: 6 })
+		.withMessage('Password must be at least 6 characters long'),
+];
+
+exports.userSignInValidator = [
+	check('email')
+		.isEmail()
+		.withMessage('Email must be valid'),
 	check('password')
 		.isLength({ min: 6 })
 		.withMessage('Password must be at least 6 characters long'),

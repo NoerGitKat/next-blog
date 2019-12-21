@@ -70,9 +70,9 @@ UserSchema.virtual('password')
 
 // Add new methods to schema
 UserSchema.methods = {
-	authenticate: plainPassword => {
+	authenticate: function(plainPassword) {
 		// Compare encrypted password with hashed password
-		return this.encryptPassword(plainPassword) === this.hashedPassword;
+		return this.encryptPassword(plainPassword) === this.hashed_password;
 	},
 	encryptPassword: function(password) {
 		// Check if there's password

@@ -63,3 +63,13 @@ exports.postSignIn = (req, res) => {
 		});
 	});
 };
+
+exports.signout = (req, res) => {
+	res.clearCookie('authToken');
+	return res.json({ message: 'Signed out successfully!' });
+};
+
+// Auth middleware for protected routes
+exports.requireSigninMiddleware = expressJwt({
+	secret: process.env.JWT_SECRET,
+});

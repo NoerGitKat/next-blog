@@ -30,7 +30,7 @@ app.use('/api/blog', blogRouter);
 app.use('/api/auth', authRouter);
 
 // Port
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
 	console.log(`The web server is running on port ${PORT}`);

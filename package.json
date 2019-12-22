@@ -1,0 +1,25 @@
+{
+	"name": "next-blog",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"run-server": "cd backend && npm run server",
+		"run-client": "cd frontend && npm run dev",
+		"dev": "concurrently \"npm run run-server \" \"npm run run-client\" "
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NoerGitKat/next-blog.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/NoerGitKat/next-blog/issues"
+	},
+	"homepage": "https://github.com/NoerGitKat/next-blog#readme",
+	"dependencies": {
+		"concurrently": "^5.0.2"
+	}
+}
